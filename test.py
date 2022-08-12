@@ -1,26 +1,14 @@
-import pytest
+def decorator_function(func):
+    def wrapper():
+        print('Функция-обёртка!')
+        print('Оборачиваемая функция: {}'.format(func))
+        print('Выполняем обёрнутую функцию...')
+        func()
+        print('Выходим из обёртки')
+    return wrapper
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
+@decorator_function
+def hello_world():
+    print('Hello world!')
 
-
-def test_exception1():
-    try:
-        browser = webdriver.Chrome()
-        browser.get("http://selenium1py.pythonanywhere.com/")
-        with pytest.raises(NoSuchElementException):
-            browser.find_element(By.CSS_SELECTOR, "button.btn")
-            pytest.fail("Не должно быть кнопки Отправить")
-    finally:
-        browser.quit()
-
-def test_exception2():
-    try:
-        browser = webdriver.Chrome()
-        browser.get("http://selenium1py.pythonanywhere.com/")
-        with pytest.raises(NoSuchElementException):
-            browser.find_element(By.CSS_SELECTOR, "no_such_button.btn")
-            pytest.fail("Не должно быть кнопки Отправить")
-    finally:
-        browser.quit()
+hello_world()
