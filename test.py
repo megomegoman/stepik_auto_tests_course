@@ -1,14 +1,15 @@
-def decorator_function(func):
-    def wrapper():
-        print('Функция-обёртка!')
-        print('Оборачиваемая функция: {}'.format(func))
-        print('Выполняем обёрнутую функцию...')
-        func()
-        print('Выходим из обёртки')
-    return wrapper
+import pytest
 
-@decorator_function
-def hello_world():
-    print('Hello world!')
+@pytest.mark.xfail(strict=True)
+def test_succeed():
+    assert True
 
-hello_world()
+
+@pytest.mark.xfail
+def test_not_succeed():
+    assert False
+
+
+@pytest.mark.skip
+def test_skipped():
+    assert False
