@@ -19,4 +19,8 @@ def browser():
 def test_aliens(step, browser):
     link = f"https://stepik.org/lesson/{step}/step/1"
     browser.get(link)
-    browser.find_element(By.NAME_TAG)
+    browser.find_element(By.TAG_NAME, "textarea").send_keys(math.log(int(time.time())))
+    WebDriverWait(browser, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button.submit-submission"))).click()
+    answer = browser.find_element(By.CSS_SELECTOR, "p.smart-hints__hint")
+    assert answer.text == "Correct!", "'Correct!' not in feedback"
+
