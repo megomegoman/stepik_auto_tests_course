@@ -19,4 +19,4 @@ def browser():
 def test_aliens(step, browser):
     link = f"https://stepik.org/lesson/{step}/step/1"
     browser.get(link)
-    browser.find_element(By.)
+    browser.find_element(By.NAME_TAG)
