@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69e36d9f-0bf4-437a-9c0c-cec9bb210771" name="Changes" comment="+">
+      <change afterPath="$PROJECT_DIR$/Documents/Передача параметров через консоль.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documents/Перезапуск теста.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +164,8 @@
       <workItem from="1660161694545" duration="330000" />
       <workItem from="1660389678748" duration="3458000" />
       <workItem from="1660393189817" duration="3619000" />
-      <workItem from="1660397574244" duration="1074000" />
+      <workItem from="1660397574244" duration="1090000" />
+      <workItem from="1660506262855" duration="1395000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <created>1660392932547</created>
@@ -199,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660397541207</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="+">
+      <created>1660428676671</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660428676671</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
